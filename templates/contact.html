@@ -1,16 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contact</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <h1>Contact Us</h1>
-    <form method="post">
-    <input type="text" name="name" placeholder="Enter your name"><br><br>
-    <button type="submit">Submit</button>
-</form>
-    <p>Email: divyanshsisodia01@gmail.com</p>
-    <a href="/">Back to Home</a>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<div class="hero small-hero">
+    <h1>Contact Us 📞</h1>
+    <p>Send us your message</p>
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <form action="https://formspree.io/f/xreynger" method="POST">
+
+            <input type="text" name="name" placeholder="Your Name" required><br><br>
+
+            <input type="email" name="email" placeholder="Your Email" required><br><br>
+
+            <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

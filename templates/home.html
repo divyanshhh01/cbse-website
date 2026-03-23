@@ -1,56 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CBSE Study Hub</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+{% extends 'base.html' %}
 
-<!-- Navbar -->
-<div class="navbar">
-    <h2>📘 CBSE Study Hub</h2>
-    <div>
-        <a href="/">Home</a> |
-        <a href="/notes">Notes</a> |
-        <a href="/important">Important</a> |
-        <a href="/papers">Papers</a> |
-        <a href="/contact">Contact</a> |
-    </div>
-</div>
+{% block content %}
 
-<!-- Hero Section -->
 <div class="hero">
-    <h1>Welcome to CBSE Study Hub 🚀</h1>
-    <p>Your one-stop solution for Class 10 preparation</p>
+    <h1>Welcome to CBSE Study Hub</h1>
+    <p>All notes, papers & resources in one place</p>
 </div>
 
-<!-- Cards Section -->
 <div class="cards">
-
     <div class="card">
-        <h3>📚 Notes</h3>
-        <p>Chapter-wise notes for all subjects</p>
-        <a href="/notes">Explore</a>
+        <h3>Notes</h3>
+        <a href="/notes">Open</a>
     </div>
 
     <div class="card">
-        <h3>⭐ Important Questions</h3>
-        <p>Most expected questions for exams</p>
-        <a href="/important">View</a>
+        <h3>Important</h3>
+        <a href="/important">Open</a>
     </div>
 
     <div class="card">
-        <h3>📄 Sample Papers</h3>
-        <p>Practice with real exam papers</p>
-        <a href="/papers">Practice</a>
+        <h3>Papers</h3>
+        <a href="/papers">Open</a>
     </div>
-
 </div>
 
-<!-- Footer -->
-<div class="footer">
-    <p>Made by Divyansh 💻 | Class 10 CBSE</p>
-</div>
-
-</body>
-</html>
+{% endblock %}

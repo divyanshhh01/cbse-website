@@ -1,30 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Important Questions</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+{% extends 'base.html' %}
 
-<!-- Navbar -->
-<div class="navbar">
-    <h2>CBSE Study Hub</h2>
-    <div>
-        <a href="/">Home</a>
-        <a href="/notes">Notes</a>
-        <a href="/important">Important</a>
-        <a href="/papers">Papers</a>
-        <a href="/contact">Contact</a>
-    </div>
-</div>
+{% block title %}Important Questions{% endblock %}
 
-<!-- Hero Section -->
+{% block content %}
+
 <div class="hero small-hero">
     <h1>Important Questions ⭐</h1>
-    <p>Practice important questions for exams</p>
 </div>
 
-<!-- Cards Section -->
 <div class="cards">
 
     <div class="card">
@@ -43,10 +26,4 @@
 
 </div>
 
-<!-- Footer -->
-<div class="footer">
-    <p>Made by Divyansh 💻 | Class 10 CBSE</p>
-</div>
-
-</body>
-</html>
+{% endblock %}

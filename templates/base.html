@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title %}NotesBazaar{% endblock %}</title>
+    <title>{% block title %}CBSE Study Hub{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Quick styling for navbar logo */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+        }
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-left img {
+            height: 50px; /* adjust logo size */
+            margin-right: 10px;
+        }
+        .navbar-left h2 {
+            margin: 0;
+        }
+        .navbar a {
+            margin: 0 5px;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
 <!-- Navbar -->
 <div class="navbar">
-    <h2>NotesBazaar</h2>
+    <div class="navbar-left">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        <h2>CBSE Study Hub</h2>
+    </div>
     <div>
-      | <a href="/">Home</a> |
+        | <a href="/">Home</a> |
         <a href="/notes">Notes</a> |
         <a href="/important">Important</a> |
         <a href="/papers">Papers</a> |

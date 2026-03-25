@@ -3,35 +3,47 @@
 <head>
     <title>{% block title %}NotesBazaar{% endblock %}</title>
 
-    <!-- Favicon (tab icon) -->
+    <!-- Favicon -->
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
     <style>
-        /* Quick styling for navbar logo */
+        /* Navbar styling */
         .navbar {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 10px 20px;
-            background-color: #f0f0f0;
+            background-color: #1596d6;  /* 🔵 Your blue */
+            color: white;
         }
+
         .navbar-left {
             display: flex;
             align-items: center;
         }
+
         .navbar-left img {
-            height: 50px; /* adjust logo size */
+            height: 50px;
             margin-right: 10px;
         }
+
         .navbar-left h2 {
             margin: 0;
+            color: white;
         }
+
         .navbar a {
             margin: 0 5px;
             text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #dff6ff;
         }
 
         /* Footer styling */
@@ -39,7 +51,8 @@
             text-align: center;
             padding: 10px;
             margin-top: 20px;
-            background-color: #f0f0f0;
+            background-color: #1596d6;  /* same blue */
+            color: white;
         }
     </style>
 </head>
